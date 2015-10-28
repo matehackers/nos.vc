@@ -884,7 +884,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #page_content .slider_wrapper .container .slider .create a .title {
   font-family: "Dosis-SemiBold";
   font-size: 16px;
-  color: #b178ad;
+  color: $create-color;
   text-shadow: white 1px 1px 0px;
   margin-top: 115px;
   text-indent: 140px;
@@ -905,7 +905,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /* line 83, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .create a p span {
-  color: #b178ad;
+  color: $create-color;
 }
 /* line 86, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .how_works a {
@@ -9449,7 +9449,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 50, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.actions ul li.submit_project:hover, #header nav.actions ul li.submit_project.selected {
-  background: #b178ad;
+  background: $create-color;
 }
 /* line 52, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.actions ul li.submit_project:hover a, #header nav.actions ul li.submit_project.selected a {
@@ -10071,7 +10071,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 48, ../../app/assets/stylesheets/content/_footer.sass */
 .footer .content .info ul li.submit_project a:hover {
-  color: #b178ad;
+  color: $create-color;
 }
 /* line 51, ../../app/assets/stylesheets/content/_footer.sass */
 .footer .content .info ul li.how_works a {
@@ -14019,7 +14019,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 27, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .title span {
-  color: #b178ad;
+  color: $create-color;
 }
 /* line 30, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main #project_warning .alert {
@@ -14073,7 +14073,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 68, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .accept label a {
-  color: #b178ad;
+  color: $create-color;
   text-decoration: none;
 }
 /* line 71, ../../app/assets/stylesheets/resources/projects/_start.sass */
@@ -14087,7 +14087,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 76, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form label {
-  color: #b178ad;
+  color: $create-color;
 }
 /* line 78, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form textarea {
@@ -14210,7 +14210,7 @@ body #page_content .container .list_title .title p {
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li a {
   background: url('/images/nosvc/arrow-purple.gif?1343753325') right 4px no-repeat;
   padding-right: 20px;
-  color: #b178ad;
+  color: $create-color;
   float: left;
   margin-top: 20px;
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
@@ -14269,7 +14269,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 27, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .title span {
-  color: #b178ad;
+  color: $create-color;
 }
 /* line 30, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .accept input, [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .accept label {
@@ -14356,7 +14356,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 90, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .accept label a {
-  color: #b178ad;
+  color: $create-color;
   text-decoration: none;
 }
 /* line 93, ../../app/assets/stylesheets/resources/projects/_new.sass */
@@ -14379,7 +14379,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 104, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .formtastic.project label {
-  color: #b178ad;
+  color: $create-color;
 }
 /* line 106, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .formtastic.project textarea {
@@ -14506,7 +14506,7 @@ body #page_content .container .list_title .title p {
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li a {
   background: url('/images/nosvc/arrow-purple.gif?1343753325') right 4px no-repeat;
   padding-right: 20px;
-  color: #b178ad;
+  color: $create-color;
   float: left;
   margin-top: 20px;
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
