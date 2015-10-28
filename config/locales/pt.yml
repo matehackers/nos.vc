@@ -19,7 +19,7 @@ pt:
       subtitle: "atingidos de %{total}"
   project_by: "Quem está organizando?"
   with: "Com"
-  leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você, ou não. Exemplo: 'X'. Se a página do perfil é http://encontros.matehackers.org/pt/users/X"
+  leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você, ou não. Exemplo: 'X'. Se a página do perfil é http://encontros.vilaflores.org.br/pt/users/X"
   tell_about_this_back: "Espalhe pra todo mundo que você se inscreveu!"
   share_my_backs: "Confira o encontro"
   tell_about_this_project: "Espalhe seu encontro pra todo mundo!"
@@ -268,7 +268,7 @@ pt:
         when_long: "Descreva detalhadamente a(s) data(s) e o(s) horário(s) de início e término do encontro, exemplo: 'Segunda, 2 de janeiro de 2013. Das 9:00 às 17:00')"
         location: "Local, endereço, cidade e estado."
         image_url: "Cole aqui o link da imagem fantástica que ilustra o encontro. Recomendamos imagens grandes, com, pelo menos, 1200 pixels de largura. Você pode usar um link do Flickr, por exemplo."
-        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você! Exemplo: 'X'. Se a página do perfil é http://encontros.matehackers.org/pt/users/X"
+        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você! Exemplo: 'X'. Se a página do perfil é http://encontros.vilaflores.org.br/pt/users/X"
         leader_bio: "Fale um pouco sobre quem vai conduzir o encontro. Sua vida e experiência com o assunto."
         maximum_backers: "Defina um número limite, mesmo, de pessoas. Quando chegar nele, as inscrições serão encerradas."
       reward:
@@ -445,7 +445,7 @@ pt:
       success: "Seu encontro foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"
     form:
       add_reward: "Adicionar tipo de inscrição"
-      important_html: "Não esqueça: o Matehackers fica com 7,5% das inscrições dos encontros realizados + taxa do meio de pagamento, entre 1,9% e 7,4%. Não cobramos nada de inscrições gratuitas. Inclua estes valores no seu orçamento pra não ter problemas. Você deve receber em torno de 85% do valor total arrecadado."
+      important_html: "Não esqueça: o Vila Flores fica com 7,5% das inscrições dos encontros realizados + taxa do meio de pagamento, entre 1,9% e 7,4%. Não cobramos nada de inscrições gratuitas. Inclua estes valores no seu orçamento pra não ter problemas. Você deve receber em torno de 85% do valor total arrecadado."
       rewards_description: "Você pode criar quantos tipos de inscrição quiser. Podem ter preços diferentes, ou serem até de graça. É possível definir um prazo de inscrição para cada tipo. Ou, ainda, permitir que a pessoa escolha quanto quer pagar, por exemplo. Crie tipos de inscrições atrativas para alcançar o número mínimo de pessoas mais rapidamente. Mas, lembre-se, suas contas devem fechar."
       rewards_title: "Inscrições"
       submit: "Enviar"
@@ -647,10 +647,10 @@ pt:
     blog: "http://vilaflores.net/"
     help: ""
     email:
-      contact: matehackers@gmail.com
+      contact: vilafloresadm@gmail.com
       payments: lfzawacki@gmail.com
       projects: lfzawacki@gmail.com
-      system: matehackers@gmail.com
+      system: vilafloresadm@gmail.com
     facebook: "https://www.facebook.com/vilaflorespoa"
     name: "Vila Encontros"
     title: "Encontros Culturais"
