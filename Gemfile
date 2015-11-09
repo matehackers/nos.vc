@@ -79,6 +79,8 @@ gem 'paypal-express', :require => 'paypal'
 # Server
 gem 'thin'
 
+gem 'exception_notification', '~> 4.0.0'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'
@@ -103,4 +105,8 @@ end
 group :development do
   gem 'mailcatcher'
   gem 'ruby-debug19'
+  gem 'net-ssh', '~> 2.6.1'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
 end
