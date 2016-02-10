@@ -4,6 +4,14 @@ GIT
   specs:
     validation_reflection (1.0.0)
 
+GIT
+  remote: https://github.com/engageis/has_vimeo_video.git
+  revision: 5b050942445e92cc785633c6319db127172a7386
+  specs:
+    has_vimeo_video (0.0.5)
+      supermodel
+      vimeo
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -175,9 +183,6 @@ GEM
     fssm (0.2.10)
     haml (3.1.8)
     has_scope (0.5.1)
-    has_vimeo_video (0.0.5)
-      supermodel
-      vimeo
     hashie (1.2.0)
     highline (1.7.8)
     hike (1.2.1)
@@ -439,7 +444,7 @@ GEM
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     unicode (0.4.4)
-    vimeo (1.5.3)
+    vimeo (1.5.4)
       httparty (>= 0.4.5)
       httpclient (>= 2.1.5.2)
       json (>= 1.1.9)
@@ -487,7 +492,7 @@ DEPENDENCIES
   foreigner
   formtastic
   has_scope
-  has_vimeo_video (~> 0.0.5)
+  has_vimeo_video!
   http_accept_language
   httparty (~> 0.6.1)
   httpclient (= 2.2.5)
