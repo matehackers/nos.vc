@@ -34,7 +34,7 @@ gem 'mailchimp'
 
 # HTML manipulation and formatting
 gem 'formtastic'
-gem "auto_html", '= 1.4.2'
+gem 'auto_html', git: 'https://github.com/lfzawacki/auto_html.git'
 gem 'kaminari'
 gem 'rails_autolink', '~> 1.0.7'
 
@@ -49,7 +49,7 @@ gem 'validation_reflection', git: 'git://github.com/ncri/validation_reflection.g
 gem 'inherited_resources', '1.3.1'
 gem 'has_scope'
 gem 'spectator-validates_email', require: 'validates_email'
-gem 'has_vimeo_video', git: 'https://github.com/engageis/has_vimeo_video.git'
+gem 'has_vimeo_video', git: 'https://github.com/lfzawacki/has_vimeo_video.git', branch: 'youtube-support'
 gem 'wirble'
 gem "on_the_spot"
 gem 'weekdays'
@@ -87,6 +87,7 @@ group :assets do
   gem "compass-rails", "~> 1.0.1"
   gem 'uglifier', '>= 1.0.3'
   gem 'compass-960-plugin', '~> 0.10.4'
+  gem 'select2-rails'
 end
 
 group :test, :development do
