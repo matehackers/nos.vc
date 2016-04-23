@@ -72,6 +72,22 @@ class Reward < ActiveRecord::Base
     }
   end
 
+  def description_sanitized
+    auto_html(description) {
+      html_escape
+      redcarpet :target => :_blank
+      sanitize :tags => []
+    }
+  end
+
+  def description_html
+    auto_html(description) {
+      html_escape
+      redcarpet :target => :_blank
+      sanitize :tags => ['a']
+    }
+  end
+
   private
   def set_token
     self.token ||= SecureRandom::hex(30) if self.private == true
