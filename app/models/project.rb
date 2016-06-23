@@ -10,6 +10,10 @@ class Project < ActiveRecord::Base
   include ERB::Util
   include Rails.application.routes.url_helpers
 
+  acts_as_taggable_on :tags
+
+  mount_uploader :logo, LogoUploader
+
   belongs_to :user
   belongs_to :leader, :class_name => "User", :foreign_key => "leader_id"
   belongs_to :category
@@ -80,17 +84,21 @@ class Project < ActiveRecord::Base
     includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.recent.not_expiring.order('date(created_at) DESC, random()').limit(3)
   }
 
-  search_methods :visible, :recommended, :expired, :not_expired, :expiring, :not_expiring, :recent, :successful
+  search_methods :visible, :recommended, :expired, :not_expired, :expiring, :not_expiring, :recent, :successful, :tagged_with
 
-  validates_presence_of :name, :user, :category, :about, :headline, :goal, :expires_at, :when_short, :when_long, :location
+  validates_presence_of :name, :user, :category, :about, :headline, :goal, :expires_at, :when_short, :when_long, :location, :leader
   validates_length_of :headline, :maximum => 140
   validates_uniqueness_of :permalink, :allow_blank => true, :allow_nil => true
   validates_numericality_of :maximum_backers, :only_integer => true, :greater_than => 0, :allow_nil => true
   validates_format_of :image_url, :with => /\.(jpg|jpeg|png|gif)$/, :allow_blank => true
   before_create :store_image_url
 
+  # Store the image URL if no image was uploaded
+  # If there's no upload and no URL, store the default image
   def store_image_url
-    self.image_url = display_image
+    if logo.url.blank?
+      self.image_url = display_image
+    end
   end
 
   def has_dynamic_fields?
@@ -102,7 +110,9 @@ class Project < ActiveRecord::Base
   end
 
   def display_image
-    if image_url.present?
+    if logo.url.present?
+      logo.url
+    elsif image_url.present?
       image_url
     elsif vimeo.thumbnail.present?
       vimeo.thumbnail
@@ -119,8 +129,14 @@ class Project < ActiveRecord::Base
     number_to_currency pledged, :unit => 'R$', :precision => 0, :delimiter => '.'
   end
 
+  # Temporary HACK
+  # Used to display the 'goal' correctly as integer in on_the_spot edits
+  def goal
+    read_attribute(:goal).to_i if read_attribute(:goal).present?
+  end
+
   def display_goal
-    goal.to_i
+    goal
     #number_to_currency goal, :unit => 'R$', :precision => 0, :delimiter => '.'
   end
 
@@ -267,6 +283,23 @@ class Project < ActiveRecord::Base
       total += reward.maximum_backers if reward.maximum_backers
     end
     total - backers.confirmed.count
+  end
+
+  # Sum the values for all confirmed registrations
+  def expected_revenue
+    payment_method_fee = Configuration.find_by_name('payment_method_fee')
+
+    payment_method_fee = if payment_method_fee.present?
+      (payment_method_fee.value.to_f/100.0)
+    else
+      0.075
+    end
+
+    backers.confirmed.sum(:value) * (1 - payment_method_fee)
+  end
+
+  def display_expected_revenue
+    number_to_currency expected_revenue, :unit => 'R$', :precision => 2, :delimiter => '.'
   end
 
   def finish!

@@ -10,12 +10,44 @@
       = @project.expires_at
 
   .project_admin_field
+    strong= label :project, :goal
+
+    - if show_edit_field
+      #{on_the_spot_edit @project, :goal}
+    - else
+      = @project.goal
+
+  .project_admin_field
+    strong= label :project, :maximum_backers
+
+    - if show_edit_field
+      #{on_the_spot_edit @project, :maximum_backers}
+    - else
+      = @project.maximum_backers
+
+  .project_admin_field
     strong= label :project, :user_id
 
     - if current_user.try(:admin)
       #{on_the_spot_edit @project, :user_id}
     - else
       = @project.user_id
+
+  .project_admin_field
+    strong= label :project, :logo
+    = form_for(@project) do |f|
+      - if @project.logo.url.present?
+        = image_tag @project.logo.url, :class => 'logo-preview'
+
+      = f.file_field :logo, :accept => "image/png,image/gif,image/jpeg"
+      = f.submit :value => t('.upload_logo')
+
+  .project_admin_field
+    strong= label :project, :tag_list
+    = form_for(@project) do |f|
+      .user-interests
+        = f.select :tag_list, @project.tag_list, {:class => 'form-control'}, { :multiple => true, :size => 5 }
+        = f.submit :value => t('.update_tags')
 
   .project_admin_field
     strong= label :project, :image_url
